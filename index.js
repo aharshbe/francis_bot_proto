@@ -2,7 +2,6 @@
  * A Bot for Slack!
  */
 
-
 /**
  * Define a function for initiating a conversation on installation
  * With custom integrations, we don't have a way to find out who installed us, so we can't message them :(
@@ -85,24 +84,41 @@ controller.on('bot_channel_join', function (bot, message) {
     bot.reply(message, "I'm here!")
 });
 
-controller.hears('hello', 'direct_message', function (bot, message) {
-    bot.reply(message, 'Hello!');
-});
+// For DMs
+// controller.hears('hello', 'direct_message', function (bot, message) {
+//     bot.reply(message, 'Hello!');
+// });
 
+controller.hears(
+    ['hello', 'hi', 'greetings'],
+    ['direct_mention', 'mention', 'direct_message'],
+    function(bot,message) {
+        bot.reply(message,'Hello!');
+    }
+);
+
+help = ["help", "pleaseme"]
+controller.hears(
+    help,
+    ['direct_mention', 'mention', 'direct_message'],
+    function(bot,message) {
+        bot.reply(message,'Here are a list of things I can help with:\n1. Open a ticket\n2. Answer a question!');
+    }
+);
 
 /**
  * AN example of what could be:
  * Any un-handled direct mention gets a reaction and a pat response!
  */
-//controller.on('direct_message,mention,direct_mention', function (bot, message) {
-//    bot.api.reactions.add({
-//        timestamp: message.ts,
-//        channel: message.channel,
-//        name: 'robot_face',
-//    }, function (err) {
-//        if (err) {
-//            console.log(err)
-//        }
-//        bot.reply(message, 'I heard you loud and clear boss.');
-//    });
-//});
+controller.on('direct_message,mention,direct_mention', function (bot, message) {
+   bot.api.reactions.add({
+       timestamp: message.ts,
+       channel: message.channel,
+       name: 'robot_face',
+   }, function (err) {
+       if (err) {
+           console.log(err)
+       }
+       bot.reply(message, 'I heard you loud and clear boss. But am not sure how to respond. Can you ask again?');
+   });
+});
