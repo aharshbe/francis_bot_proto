@@ -35,8 +35,9 @@ secret=Client Secret
 
 ## Author
 - [Austin Harshberger](https://github.com/aharshbe)
+- Borrowed boilerplate code courtesy of [lonelyclaud](https://github.com/lonelyclaud)
 
 
 ## halp
-- Ref: [link](https://api.slack.com/tutorials/easy-peasy-bots)
+- Slack ref: [link](https://api.slack.com/tutorials/easy-peasy-bots)
 

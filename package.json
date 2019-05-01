@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aharshbe"
+    "url": "git+https://github.com/aharshbe/francis_bot_proto"
   },
   "keywords": [
     "slack",
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/aharshbe"
   },
-  "homepage": "https://github.com/aharshbe",
+  "homepage": "https://github.com/aharshbe/francis_bot_proto/blob/master/README.md",
   "engines": {
     "node": "5.1.1"
   },
