@@ -15,7 +15,7 @@
 - Workspace: `the workspace you'd like to add it to`
 - Click `Bots` on next screen
 - Click `Add a Bot user` and confirm
-- Click `OAuth & Permissions` and click `Add new Redirect URL`, click Save URLs
+- Click `OAuth & Permissions` and click `Add new Redirect URL`, add `https://francis.localtunnel.me/oath` click Save URLs
 - Click `Basic Information` to the right and copy `client id` and and `client secret` into the file you'll create below
 - Create a `.env` file in the project directory in the repo you cloned locally, the contents of the `.env` file should be the same as below
 
