@@ -33,11 +33,11 @@ secret=Client Secret
 - Type `hello`. francis should then say `Hello!`
 - Optionally add fracnis to a channel with commands `/invite @francis [channel]`
 
-## Author
+## Authors
 - [Austin Harshberger](https://github.com/aharshbe)
 - Borrowed boilerplate code courtesy of [lonelyclaud](https://github.com/lonelyclaud)
 
 
-## halp
+## Help
 - Slack ref: [link](https://api.slack.com/tutorials/easy-peasy-bots)
 
